@@ -1,4 +1,4 @@
-Assemblies
+Creating multilayers and surfactant layers
 ==========
 
 :py:mod:`easyreflectometry` is designed to be used with a broad range of different assemblies.
