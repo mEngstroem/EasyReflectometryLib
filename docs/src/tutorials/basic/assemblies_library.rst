@@ -1,15 +1,16 @@
 Creating multilayers and surfactant layers
 ==========
 
-:py:mod:`easyreflectometry` is designed to be used with a broad range of different assemblies.
-These assemblies offer flexibility for the user and enable more powerful analysis by making chemical and pysical constraints available with limited code. 
+:py:mod:`easyreflectometry` is designed to be used with a broad range of different assemblies.  
+Assemblies are collective layers behaving as a single object, for example, a multilayer or a surfactant layer.
+These assemblies offer flexibility for the user and enable more powerful analysis by making chemical and physical constraints available with limited code. 
 In this page, we will document the assemblies that are available with simple examples of the constructors that exist.
 Full API documentation is also available for the :py:mod:`easyreflectometry.sample.assemblies` module.
 
 :py:class:`Multilayer`
 ----------------------
 
-This assembly should be used for a series of layers that, for whatever reason, should be thought of as a single object. 
+This assembly should be used for a series of layers that should be thought of as a single object. 
 For example, in the `simple fitting tutorial`_ this assembly type is used to combine the silicon and silicon dioxide layer that as formed into a single object. 
 All of the separate layers in these objects will be fitted individually, i.e. there is no constraints present, however, there is some cognative benefit to grouping layers together. 
 
