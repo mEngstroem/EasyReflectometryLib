@@ -1,4 +1,4 @@
-Model
+Creating a model
 =====
 
 The main component of an experiment in :py:mod:`easyreflectometry` is the :py:class:`Model`. 

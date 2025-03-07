@@ -7,11 +7,7 @@
    
    installation
    usage
-   sample/sample
-   calculators
-   model/model
    tutorials/tutorials
-   dictionary
    contributing
    authors
    api/api
