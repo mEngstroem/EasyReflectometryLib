@@ -1,4 +1,4 @@
-Sample
+Basic
 ======
 
 The :py:mod:`easyreflectometry` package is focused on making easy to use functionality for specific modelling approaches. 
