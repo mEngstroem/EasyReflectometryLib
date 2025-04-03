@@ -61,7 +61,7 @@ docs = [
     "myst_parser==4.0.1",
     "nbsphinx==0.9.7",
     "sphinx==8.1.3",
-    "sphinx_autodoc_typehint==3.0.1",
+    "sphinx_autodoc_typehint",
     "sphinx-book-theme==1.1.4",
     "sphinx-copybutton==0.5.2",
     "toml==0.10.2",
