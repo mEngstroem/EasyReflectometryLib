@@ -39,7 +39,7 @@
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=c73c0f3e"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
@@ -425,10 +425,10 @@ polymer with some D2O intercalated. Therefore, if, for example, the surface cove
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-numpy: 2.1.3
-scipp: 25.2.0
-easyreflectometry: 1.3.1
-refnx: 0.1.52
+numpy: 1.26.0
+scipp: 24.02.0
+easyreflectometry: 1.3.0
+refnx: 0.1.54
 </pre></div></div>
 </div>
 <p>For information about the data being read in and the details of the model see <a class="reference internal" href="simple_fitting.html"><span class="doc">the previous tutorial</span></a>. We will gloss over these details here. We use <code class="docutils literal notranslate"><span class="pre">pooch</span></code> to fetch the file from the repository.</p>
@@ -482,8 +482,8 @@ Downloading data from &#39;https://raw.githubusercontent.com/EasyScience/EasyRef
 </div>
 </div>
 <p>So for the <code class="docutils literal notranslate"><span class="pre">solvated_film</span></code> object, the scattering length density is calculated as,</p>
-<p>ρ solvent = ( 1 - ϕ film ) + ϕ ρ D 2 O</p>
-<p>where the scattering length densities are given with ρ and the coverage with ϕ. This means that when we investigate the <code class="docutils literal notranslate"><span class="pre">solvated_film</span></code> object, the scattering length density will be 3.09e-6 Å-2</p>
+<center><p><img alt="f61d90fb0f954725be1c94d4c63df07d" src="../../_images/eq_solvated.svg" /></p>
+</center><!-- Using https://editor.codecogs.com/ --><p>where the scattering length densities are given with ρ and the coverage with ϕ. This means that when we investigate the <code class="docutils literal notranslate"><span class="pre">solvated_film</span></code> object, the scattering length density will be 3.09e-6 Å-2</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>

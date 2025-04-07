@@ -39,7 +39,7 @@
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=c73c0f3e"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
@@ -427,8 +427,8 @@ document.write(`
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-easyreflectometry: 1.3.1
-refnx: 0.1.52
+easyreflectometry: 1.3.0
+refnx: 0.1.54
 </pre></div></div>
 </div>
 <section id="Reading-in-experimental-data">
@@ -441,7 +441,7 @@ refnx: 0.1.52
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
     <span class="c1"># URL to one of Pooch&#39;s test files</span>
-    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/mEngstroem/EasyReflectometryLib/refs/heads/new-docs-fix/docs/src/tutorials/fitting/d70d2o.ort&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/mEngstroem/EasyReflectometryLib/refs/heads/master/docs/src/tutorials/fitting/d70d2o.ort&quot;</span><span class="p">,</span>
     <span class="n">known_hash</span><span class="o">=</span><span class="s2">&quot;3e4750536621be8eec493fa21a287e408d384f29cacb113b71d02690d99f0998&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
@@ -454,7 +454,7 @@ refnx: 0.1.52
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Downloading data from &#39;https://raw.githubusercontent.com/mEngstroem/EasyReflectometryLib/refs/heads/new-docs-fix/docs/src/tutorials/fitting/d70d2o.ort&#39; to file &#39;/home/runner/.cache/pooch/514869595c19d4c9f1719b22c05839f7-d70d2o.ort&#39;.
+Downloading data from &#39;https://raw.githubusercontent.com/mEngstroem/EasyReflectometryLib/refs/heads/master/docs/src/tutorials/fitting/d70d2o.ort&#39; to file &#39;/home/runner/.cache/pooch/69f27a77906d7acacf48b81067e2e540-d70d2o.ort&#39;.
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -472,9 +472,9 @@ representation of the slab model for a phosphoplipid monolayer is shown below.</
 <center><p><img alt="A slab model description for a phospholipid monolayer." class="no-scaled-link" src="../../_images/monolayer.png" style="width: 300px;" /></p>
 </center><center><p>A slab model description for a phospholipid monolayer, showing the head and tail layers.</p>
 </center><p>The slab model for a phospholipid monolayer involves describing the system as consisting of two components, that for the hydrophilic head group layer and that for the hydrophobic tail group layer. Each of these layers have some thickness that can be estimated by considering the size of the head and tail groups. The scattering length density (ρ) for the layers is then defined based on the layer thickness (d), the scattering length for the lipid head or tail molecule (b), the surface number
-density of the monolayer (defined by the area per molecule, APM) and the presence of solvent in the head or tail molecules (ϕ solvation), where the solvent has a known scattering length density (ρsolvent),</p>
-<p>ρ = b d APM ( 1 - ϕ ) + ρ solvent ϕ</p>
-<p>This approach has two benefits:</p>
+density of the monolayer (defined by the area per molecule, APM) and the presence of solvent in the head or tail molecules (ϕ solvation), where the solvent has a known scattering length density (ρ solvent),</p>
+<center><p><img alt="b7f0edefd12e4ba5b374e8317603ebef" src="../../_images/eq_monolayer.svg" /></p>
+</center><!-- Using https://editor.codecogs.com/ --><p>This approach has two benefits:</p>
 <ol class="arabic simple">
 <li><p>By constraining the area per molecule of the head and tail groups to be the same, the analysis can ensure that the number density of the two components is equal (i.e. for every head group there is a tail group), as would be expected given the chemical bonding.</p></li>
 <li><p>The area per molecule is a parameter that can be measured using complementary methods, such as surface-pressure isotherm, to help define the value.</p></li>
@@ -712,8 +712,8 @@ EasySurfactantLayer:
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 EasyModel:
-  scale: 0.14052770152435318
-  background: 8.867662998314982e-07
+  scale: 0.1405264237512167
+  background: 8.868146242678354e-07
   resolution: 5 %
   color: black
   sample:
@@ -732,12 +732,12 @@ EasyModel:
           EasyLayerAreaPerMolecule:
             material:
               C10H18NO8P in D2O:
-                solvent_fraction: 0.623 dimensionless
+                solvent_fraction: 0.632 dimensionless
                 sld: 4.305e-6 1/Å^2
                 isld: 0.000e-6 1/Å^2
                 material:
                   C10H18NO8P:
-                    sld: 0.908e-6 1/Å^2
+                    sld: 0.781e-6 1/Å^2
                     isld: 0.000e-6 1/Å^2
                 solvent:
                   D2O:
@@ -746,7 +746,7 @@ EasyModel:
             thickness: 12.900 Å
             roughness: 3.000 Å
           molecular_formula: C10H18NO8P
-          area_per_molecule: 51.26 Å^2
+          area_per_molecule: 59.61 Å^2
         tail_layer:
           EasyLayerAreaPerMolecule:
             material:
@@ -765,7 +765,7 @@ EasyModel:
             thickness: 17.600 Å
             roughness: 3.000 Å
           molecular_formula: C34D70
-          area_per_molecule: 51.26 Å^2
+          area_per_molecule: 59.61 Å^2
         area per molecule constrained: true
         conformal roughness: true
     - EasyMultilayer:
